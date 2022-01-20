@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Footer from '../components/Footer';
 
 const Container = styled.div`
     width: 100vw;
@@ -60,7 +61,8 @@ const Button= styled.button`
 
 const Login = () => {
   return (
-      <Container>
+     <div>
+          <Container>
           <Wrapper>
               <Title>SIGN IN</Title>
               <Form>
@@ -73,6 +75,8 @@ const Login = () => {
               </Form>
           </Wrapper>
       </Container>
+      <Footer />
+     </div>
   )
 };
 

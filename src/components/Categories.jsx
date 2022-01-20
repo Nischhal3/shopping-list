@@ -1,7 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import { categories } from '../data';
+import Announcement from './Announcement';
 import CategoryItem from './CategoryItem';
+import Navbar from './Navbar';
 
 const Container = styled.div`
     padding: 20px;
@@ -12,7 +14,7 @@ const Container = styled.div`
 
 const Categories = () => {
   return (  
-    <Container>
+     <Container>
         {categories.map((item)=>(
             <CategoryItem key={item.id} item={item}  />
         ))}

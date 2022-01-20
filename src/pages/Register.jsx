@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Footer from '../components/Footer';
 
 const Container = styled.div`
     width: 100vw;
@@ -57,7 +58,8 @@ const Button= styled.button`
 
 const Register = () => {
   return (
-      <Container>
+      <div>
+          <Container>
           <Wrapper>
               <Title>CREATE AN ACCOUNT</Title>
               <Form>
@@ -74,6 +76,8 @@ const Register = () => {
               </Form>
           </Wrapper>
       </Container>
+      <Footer/>
+      </div>
   )
 };
 
