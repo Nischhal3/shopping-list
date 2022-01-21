@@ -16,7 +16,7 @@ const Announcement = () => {
   return (
     <div>
         <Container>
-            Super Deal! Free Shipping on Orders Over €50
+            Super Deal! Free Shipping on Orders Over €100
         </Container>
     </div>
   )

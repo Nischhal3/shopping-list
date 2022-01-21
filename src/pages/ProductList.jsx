@@ -1,13 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import Announcement from '../components/Announcement';
 import Categories from '../components/Categories';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import NewsLetters from '../components/NewsLetters';
 
 const Container = styled.div``
-const Title = styled.h1``
 
 const FilterContainer = styled.div`
     display: flex;
@@ -30,13 +28,12 @@ const Option = styled.option``;
 const ProductList = () => {
   return(
       <Container>
-          <Announcement/>
           <Navbar/>
           <FilterContainer>
                 <Filter>
                   <FilterText>Filter Products:</FilterText>
                   <Select>
-                      <Option disabled selected>Men</Option>
+                      <Option>Men</Option>
                       <Option>Women</Option>
                       <Option>Electronic</Option>
                       <Option>Jwellery</Option>
@@ -45,7 +42,7 @@ const ProductList = () => {
                 <Filter>
                   <FilterText>Sort By Price:</FilterText>
                   <Select>
-                      <Option disabled selected>1-100</Option>
+                      <Option>1-100</Option>
                       <Option>100-200</Option>
                       <Option>200-400</Option>
                       <Option>400-800</Option>

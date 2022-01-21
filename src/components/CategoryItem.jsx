@@ -1,5 +1,6 @@
 import { ShoppingCartOutlined } from '@material-ui/icons';
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Text = styled.div`
@@ -34,7 +35,7 @@ const Container = styled.div`
     border: 2px solid gray;
     box-shadow: 5px 10px #888888;
     border-radius: 2%;
-
+    cursor: pointer;
     & :hover ${Cart}{
         opacity: 1;
     }
@@ -58,10 +59,14 @@ const Title = styled.h1`
 `;
 
 const CategoryItem = ({item}) => {
+    const navigate = useNavigate();
+    const handleClick = () =>{
+        navigate(`/product/${item.id}`);
+    }
   return (
       <Container>
            <Info>
-           <Image src={item.image} />
+           <Image src={item.image} onClick={handleClick}/>
                 <Title>{item.title}</Title>
                 <Cart>
                 <Text>Add to Basket</Text>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import Footer from '../components/Footer';
 
@@ -60,6 +61,7 @@ const Button= styled.button`
 `
 
 const Login = () => {
+    const navigate = useNavigate();
   return (
      <div>
           <Container>
@@ -71,7 +73,7 @@ const Login = () => {
                   <Input placeholder="password" />
                   <Button>LOGIN</Button>
                   <Link>Forgot password?</Link>
-                  <Link>Create a new account.</Link>
+                  <Link onClick={() =>navigate('/register')}>Create a new account.</Link>
               </Form>
           </Wrapper>
       </Container>

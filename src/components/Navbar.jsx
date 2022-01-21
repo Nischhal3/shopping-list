@@ -2,6 +2,7 @@ import { Search,  ShoppingCartOutlined } from '@material-ui/icons';
 import React from 'react';
 import styled from 'styled-components';
 import  {Badge}  from '@material-ui/core';
+import { useNavigate } from 'react-router-dom';
 
 
 const Container = styled.div`
@@ -17,11 +18,7 @@ const Left = styled.div`
     display: flex;
     align-items: center;
 `
-const Language = styled.span`
-    font-size: 14px;
-    cursor: pointer;
 
-`
 const SearchContainer = styled.div`
     border: 1px solid lightgray;
     display: flex;
@@ -54,11 +51,11 @@ const MenuItem = styled.div`
 `
     
 const Navbar = () => {
+    const navigate = useNavigate();
   return(
     <Container>
         <Wrapper>
             <Left>
-                <Language>EN</Language>
                 <SearchContainer>
                 <Input/> 
                 <Search style={{color: 'gray' ,fontSize: 16}}/>
@@ -68,8 +65,8 @@ const Navbar = () => {
                 <Logo>Shopping-Cart</Logo>
             </Center>
             <Right>
-                <MenuItem>REGISTER</MenuItem>
-                <MenuItem>SIGN IN</MenuItem>
+                <MenuItem onClick={() =>navigate('/register')} >REGISTER</MenuItem>
+                <MenuItem onClick={() =>navigate('/login')}>SIGN IN</MenuItem>
                 <MenuItem>
                 <Badge badgeContent={0} color='primary' >
                     < ShoppingCartOutlined />
