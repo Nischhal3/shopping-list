@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import { sliderItems } from '../data';
+import { mobile } from '../responsive';
 
 const Container = styled.div`
     width: 100%;
@@ -10,6 +11,9 @@ const Container = styled.div`
     display: flex;
     position: relative;
     overflow: hidden;
+    ${mobile({
+        height: '20vh',
+    })} 
 `
 const Arrow = styled.div`
     width: 50px;
@@ -33,6 +37,7 @@ const Wrapper = styled.div`
     display: flex;
     transform: translate(${(props) => props.slideIndex * -100}vw);
     transition: all 1.5s ease;
+
 `
 
 const Slide = styled.div`
@@ -41,37 +46,62 @@ const Slide = styled.div`
     display: flex;
     align-items: center;
     background-color: #${props => props.bg};
+    ${mobile({
+       height: '20vh'
+    })} 
 `;
 
 const ImgContainer = styled.div`
     height: 100%;
     flex: 1;
     margin-left: 80px;
+    ${mobile({
+        marginLeft: '5px',
+        height: '70%',
+    })}  
 `;
 
 const Image = styled.img`
     height:80%;
+    ${mobile({
+        height: '100%',
+    })}  
 `
 
 const InfoContainer = styled.div`
+    height: 100%;
     flex: 1;
     padding: 50px;
+    ${mobile({
+       height: '22%'
+    })}  
 `;
 
 const Title = styled.h1`
     font-size: 70px;
+    ${mobile({
+        fontSize: '10px',
+    })}  
 `;
 const Desc = styled.p`
     margin: 50px 0px;
     font-size: 20px;
     font-weight: 500;
     letter-spacing: 3px;
+    ${mobile({
+        display: 'none',
+    })} 
 `;
 const Button = styled.button`
     padding: 10px;
     font-size: 20px; 
     background-color: transparent ;
     cursor: pointer;
+    ${mobile({
+        padding:'0px',
+        fontSize: '10px',
+        marginBottom: '10px'
+    })} 
 `;
 
 
@@ -103,7 +133,6 @@ const Slider = () => {
                     <Button onClick={() =>navigate('/products')}>BUY NOW</Button>
                 </InfoContainer>
               </Slide>
-
               ))}
           </Wrapper>
           <Arrow direction='right' onClick={()=>handleClick('right')}>

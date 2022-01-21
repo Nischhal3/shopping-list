@@ -8,9 +8,23 @@ import Register from './pages/Register';
 import { BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
 import styled from 'styled-components';
 import Announcement from './components/Announcement';
+import { mobile } from './responsive';
+import Navbar from './components/Navbar';
 
+const Container = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  //display: 'flex'; 
+  //align-items:'center',;
+  //justify-content:'space-around';
+  //margin: '10px';
+  //font-weight: 'bold';
+  //font-size: '20px';
+  //color: '#2A3D45';
+`;
 const Filter = styled.div`
-    margin: 20px;
+   background-color: red;
 `
 const FilterText = styled.span`
     font-size: 20px;
@@ -30,8 +44,8 @@ const App = () => {
     //<Product/>
     //<Register/>
     //<Login/>
-    return(
-        <Router>
+    /**
+     *     <Router>
           <Announcement />
           <div style={{display: 'flex', alignItems:'center', justifyContent:'space-around', margin: '10px'}}>
             <Link style={{ fontWeight: 'bold',fontSize: '20px', color: '#2A3D45'}} to='/'>Home</Link>
@@ -53,6 +67,18 @@ const App = () => {
               < Route path="product/:id" element={<Product/>} />
             </Routes>
         </Router>
+     */
+    return(
+        <Router>
+         <Announcement />
+         <Container >
+            <Link style={{ fontSize: '18px', color: '#2A3D45'}} to='/'>Home</Link>
+            <Link style={{ fontSize: '18px', color: '#2A3D45'}}to='/products'>Products</Link>
+        </Container>
+        <Home />
+        <Routes>
+        </Routes>
+      </Router>
     )
 
 };
