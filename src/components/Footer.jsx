@@ -106,7 +106,8 @@ const Footer = () => {
           <Left>
               <Logo>&copy; Nischhal Shrestha.</Logo>
               <Description>
-              Mauris sed libero. Suspendisse facilisis nulla in lacinia laoreet, Lorem velit accumsan velit vel Mattis libero nisl et sem. Proin interdum maecenas massa turpis sagittis in, interdum non lobortis vitae massa. Quisque Purus lectus, posuere eget imperdiet nec sodales id arcu. Vestibulum Elit pede dictum eu, Viverra non tincidunt eu ligula.
+                  Added reposive design for home page with the moible screen of max-width 414 px. 
+                  <br>TODO: responsive design for other pages.</br>
               </Description>
               <SocialContainer>
               <SocialIcon color='2B5999'>
