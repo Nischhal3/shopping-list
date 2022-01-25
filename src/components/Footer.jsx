@@ -1,7 +1,7 @@
 import { AlternateEmail, Facebook, Instagram, LinkedIn, Phone, Room } from '@material-ui/icons';
 import React from 'react';
 import styled from 'styled-components';
-import { mobile } from '../responsive';
+import { mobile, mobile280 } from '../responsive';
 const Container = styled.div`
     display: flex;
 `;
@@ -40,6 +40,11 @@ const SocialIcon = styled.div`
     align-items: center;
     justify-content: center;
     margin-right: 20px;
+    ${mobile280({
+        width: '30px',
+        height: '30px',
+        marginRight:'10px'
+    })}
 `;
 const Center = styled.div`
      flex:1;
@@ -75,6 +80,9 @@ const Right = styled.div`
 const Contact = styled.h3`
     margin-bottom: 10px;
     margin-left: 5px;
+    ${mobile280({
+        fontSize: '14px'
+    })}
 `;
 
 const ContactItem = styled.div`
@@ -84,6 +92,11 @@ const ContactItem = styled.div`
     align-items: center;
     ${mobile({
        fontSize: '14px'
+    })}
+
+    ${mobile280({
+        fontSize: '12px',
+        marginBottom: '10px'
     })}
 `;
 

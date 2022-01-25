@@ -75,8 +75,12 @@ const App = () => {
             <Link style={{ fontSize: '18px', color: '#2A3D45'}} to='/'>Home</Link>
             <Link style={{ fontSize: '18px', color: '#2A3D45'}}to='/products'>Products</Link>
         </Container>
-        <Home />
         <Routes>
+        < Route path="/" element={<Home/>} />
+            < Route path="products" element={<ProductList/>} />
+            < Route path="register" element={<Register/>} />
+            < Route path="login" element={<Login/>} />
+            < Route path="product/:id" element={<Product/>} />
         </Routes>
       </Router>
     )
