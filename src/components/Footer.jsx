@@ -107,7 +107,7 @@ const Footer = () => {
               <Logo>&copy; Nischhal Shrestha.</Logo>
               <Description>
                   Added reposive design for home page with the moible screen of max-width 414 px. 
-                  <br>TODO: responsive design for other pages.</br>
+                  TODO: responsive design for other pages.
               </Description>
               <SocialContainer>
               <SocialIcon color='2B5999'>
