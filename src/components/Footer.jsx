@@ -1,7 +1,7 @@
 import { AlternateEmail, Facebook, Instagram, LinkedIn, Phone, Room } from '@material-ui/icons';
 import React from 'react';
 import styled from 'styled-components';
-import { mobile, mobile280 } from '../responsive';
+import { mobile, mobile280, mobile540, mobile820 } from '../responsive';
 const Container = styled.div`
     display: flex;
 `;
@@ -13,7 +13,10 @@ const Left = styled.div`
     ${mobile({
        padding: '5px'
     })}
-
+    
+    ${mobile820({
+        fontSize: '18px',
+    })}
 `;
 const Logo = styled.h1`
     ${mobile({
@@ -43,7 +46,7 @@ const SocialIcon = styled.div`
     ${mobile280({
         width: '30px',
         height: '30px',
-        marginRight:'10px'
+        marginRight:'5px'
     })}
 `;
 const Center = styled.div`
@@ -52,6 +55,15 @@ const Center = styled.div`
      ${mobile({
        display : 'none'
     })}
+
+    ${mobile820({
+        fontSize: '18px',
+    })}
+    ${mobile540({
+        display: 'none'
+    })}
+
+
 `;
 
 const Title = styled.h3`
@@ -74,7 +86,11 @@ const Right = styled.div`
     padding: 20px;
     ${mobile({
         padding: '5px'
-        })}
+    })}
+
+    ${mobile820({
+        fontSize: '18px',
+    })}
 `;
 
 const Contact = styled.h3`
@@ -91,13 +107,18 @@ const ContactItem = styled.div`
     flex-direction: row;
     align-items: center;
     ${mobile({
-       fontSize: '14px'
+       fontSize: '14px',
+       margin: '5px'
     })}
 
     ${mobile280({
         fontSize: '12px',
-        marginBottom: '10px'
+        marginBottom: '0px',
+        marginLeft: '0px',
+        padding: '0px',
     })}
+
+    
 `;
 
 const Footer = () => {

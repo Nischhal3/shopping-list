@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import { sliderItems } from '../data';
-import { mobile } from '../responsive';
+import { mobile, mobile540, mobile820 } from '../responsive';
 
 const Container = styled.div`
     width: 100%;
@@ -12,8 +12,15 @@ const Container = styled.div`
     position: relative;
     overflow: hidden;
     ${mobile({
-        height: '20vh',
+        height: '30vh',
     })} 
+
+    ${mobile540({
+       height: '60vh'
+    })}
+    ${mobile820({
+       height: '60vh'
+    })}
 `
 const Arrow = styled.div`
     width: 50px;
@@ -47,8 +54,9 @@ const Slide = styled.div`
     align-items: center;
     background-color: #${props => props.bg};
     ${mobile({
-       height: '20vh'
+       height: '30vh'
     })} 
+
 `;
 
 const ImgContainer = styled.div`
@@ -58,15 +66,25 @@ const ImgContainer = styled.div`
     ${mobile({
         marginLeft: '5px',
         height: '70%',
-    })}  
+    })}
+    ${mobile540({
+       height: '50vw',
+       marginBottom: 300
+    })} 
+    ${mobile820({
+       height: '70vw',
+       marginBottom: 300
+    })} 
+   
 `;
 
 const Image = styled.img`
     height:80%;
     ${mobile({
         height: '100%',
+        paddingLeft: '40px'
     })}  
-`
+`;
 
 const InfoContainer = styled.div`
     height: 100%;
@@ -75,13 +93,26 @@ const InfoContainer = styled.div`
     ${mobile({
        height: '22%'
     })}  
+    ${mobile820({
+       marginTop: 400
+    })} 
+    ${mobile540({
+       marginTop: 140
+    })} 
 `;
 
 const Title = styled.h1`
     font-size: 70px;
     ${mobile({
         fontSize: '10px',
-    })}  
+    })}
+    
+    ${mobile820({
+       fontSize: '30px',
+    })}
+    ${mobile540({
+       fontSize: '25px',
+    })}
 `;
 const Desc = styled.p`
     margin: 50px 0px;
@@ -89,6 +120,9 @@ const Desc = styled.p`
     font-weight: 500;
     letter-spacing: 3px;
     ${mobile({
+        display: 'none',
+    })} 
+    ${mobile540({
         display: 'none',
     })} 
 `;

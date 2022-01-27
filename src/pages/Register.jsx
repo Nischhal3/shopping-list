@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Footer from '../components/Footer';
+import { mobile, mobile1024, mobile280, mobile540, mobile820 } from '../responsive';
 
 const Container = styled.div`
     width: 100vw;
@@ -11,6 +12,18 @@ const Container = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    ${mobile280({
+        height: '80vh'
+    })} 
+    ${mobile({
+        height: '80vh'
+    })} 
+    ${mobile540({
+        height: '95vh'
+    })} 
+    ${mobile820({
+        height: '60vh'
+    })} 
 `
 
 const Wrapper = styled.div`
@@ -21,10 +34,34 @@ const Wrapper = styled.div`
     border: 2px solid gray;
     box-shadow: 5px 10px #888888;
     border-radius: 1%;
+
+    ${mobile280({
+        width: '90%'
+    })}
+    
+    ${mobile({
+        width: '90%'
+    })}
+
+    ${mobile540({
+        width: '90%'
+    })}
+
+    ${mobile820({
+        width: '60%'
+    })}
+
+    ${mobile1024({
+        width: '60%'
+    })}
 `
+
 const Title = styled.h1`
     font-size: 24px;
     font-weight: 300;
+    ${mobile280({
+        fontSize: '14px'
+    })} 
 `
 
 const Form = styled.form`
@@ -40,6 +77,9 @@ const Input = styled.input`
     padding: 5px;
     border: 1px solid gray;
     box-shadow: 2px 2px #888888;
+    ${mobile280({
+       margin: '12px 7px 0px 0px'
+    })} 
 `
 
 const Agreement = styled.span`
@@ -54,6 +94,14 @@ const Button= styled.button`
     background-color: teal;
     color: white;
     cursor: pointer;
+    ${mobile280({
+       width: '60%',
+       fontSize: '10px'
+    })} 
+
+    ${mobile({
+        width: '50%'
+    })}
 `
 
 const Register = () => {

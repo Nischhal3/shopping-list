@@ -1,7 +1,7 @@
 import { Send } from '@material-ui/icons';
 import React from 'react';
 import styled from 'styled-components';
-import { mobile } from '../responsive';
+import { mobile, mobile540, mobile820 } from '../responsive';
 
 const Container = styled.div`
     height: 60vh;
@@ -13,6 +13,14 @@ const Container = styled.div`
     ${mobile({
        height: '20vh'
     })} 
+
+    ${mobile540({
+        height: '30vh'
+    })} 
+
+    ${mobile820({
+        height: '20vh'
+    })} 
 `;
 const Title = styled.h1`
     font-size: 70px;
@@ -20,6 +28,9 @@ const Title = styled.h1`
     ${mobile({
         marginBottom: '10px',
        fontSize: '20px'
+    })} 
+    ${mobile540({
+       fontSize: '55px',
     })} 
 `;
 const Description = styled.div`
