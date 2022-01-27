@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import Categories from '../components/Categories';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import NewsLetters from '../components/NewsLetters';
